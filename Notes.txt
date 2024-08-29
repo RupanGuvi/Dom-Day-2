@@ -1,0 +1,105 @@
+Without Event Using Function Example:-
+ <p>
+        <label for="email">Enter Your Email</label>
+        <input type="email" name="age" id="email" placeholder="Enter Your Email Id">
+      </p>
+     <button type="submit" onclick="foo()">Check</button>
+    <script >
+       function foo(){
+        const res = document.getElementById("email").value;
+        //console.log(res);
+        if(res ==="test@gmail.com"){
+            alert("You Are Valid User")
+        }
+        else{
+            alert("You Are Not A Valid User")
+        }
+       }
+    </script>
+
+Event Listener :- https://event-listener-demo.netlify.app/
+
+syntax:-
+
+variablename.addEventListener("event",function)
+
+Example:- 
+
+const button = document.createElement("button");
+button.setAttribute("type","button");
+button.id="btn";
+button.classList.add("btn","check");
+button.innerText="Click Here"
+button.addEventListener("click",()=>{
+    alert("Good Evening Guys👌")
+})
+document.body.append(button);
+
+Task 1:- 
+
+Color Change inside the circle
+
+<div id="container">
+        <div id="circle">
+        </div>
+        <button id="red" class="btn">Red</button>
+        <button id="green" class="btn">Green</button>
+        <button id="blue" class="btn">Blue</button>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+
+
+const circle = document.getElementById("circle");
+const red = document.getElementById("red");
+const reset = document.getElementById("reset");
+const blue = document.getElementById("blue");
+const green = document.getElementById("green");
+
+red.addEventListener("click",()=>circle.style.backgroundColor="red");
+blue.addEventListener("click",()=>circle.style.backgroundColor="blue");
+green.addEventListener("click",()=>circle.style.backgroundColor="green");
+reset.addEventListener("click",()=>circle.style.backgroundColor="#ffffff");
+
+
+Task2:-
+
+const box = document.querySelector("div");
+const input = document.querySelector("input")
+
+input.addEventListener("input",()=>{
+    box.style.borderRadius = input.value;
+    box.style.background = input.value;
+})
+  <div></div>
+    <input type="text" />
+    
+    div{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+}
+input{
+    margin: 20px 20px 20px 20px;
+    padding: 10px;
+}
+
+Task 3:-
+
+ <div id="circle"></div>
+   <input type="color" id="color">
+
+   const circle = document.getElementById("circle");
+const input = document.getElementById("color");
+input.addEventListener("change",()=>{
+    circle.style.backgroundColor =input.value;
+})
+
+#circle{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #ffff;
+    cursor: pointer;
+}
